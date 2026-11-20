@@ -9,6 +9,17 @@
   $('#c-about').innerHTML = C.company.about.map(p => `<p>${esc(p)}</p>`).join('');
   $('#c-facts').innerHTML = C.company.facts.map(([k, v]) => `<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');
   $('#pillars').innerHTML = C.pillars.map(p => card(p.t, p.d)).join('');
+  $('#company-spotlight').innerHTML = `
+    <img class="company-spotlight-logo" src="assets/CompanyLogo.png" alt="VELNOVA company logo">
+    <p class="kick">About VELNOVA</p>
+    <h3>${esc(C.company.title)}</h3>
+    <p>${esc(C.company.lead)}</p>
+    <p class="company-spotlight-meta">${C.products.map(category => esc(category.category)).join(' · ')}</p>`;
+  $('#showcase-ranges').innerHTML = C.products.map(category =>
+    `<a class="showcase-range" href="category.html?category=${encodeURIComponent(category.slug)}">
+      <span>${esc(category.category)}</span><strong>${esc(category.name)}</strong><b aria-hidden="true">→</b>
+    </a>`
+  ).join('');
   $('#steps').innerHTML = C.steps.map((p, i) =>
     `<article class="card process-card">
       <span class="process-step" aria-hidden="true">${i + 1}</span>
@@ -33,7 +44,6 @@
     const category = C.products[i];
     dlg.innerHTML = `<form method="dialog" class="dh"><div><small>${esc(category.category)}</small><h3>${esc(category.name)}</h3></div><button class="btn dk" aria-label="Close ${esc(category.name)}">Close</button></form>
       <p class="lead category-lead">${esc(category.desc)}</p>
-      <p class="note rating-note">Illustrative ratings for preview only.</p>
       <div class="category-products">${category.items.map(item =>
         `<article class="product-card">
           <div class="product-card-art"><svg class="product-image" viewBox="0 0 180 210" role="img" aria-label="${esc(item.name)}">
@@ -46,10 +56,9 @@
             <path d="M67 128h46" stroke="${item.accent}" stroke-opacity=".3"/>
           </svg></div>
           <div class="product-card-copy"><small>${esc(item.scent)}</small><h4>${esc(item.name)}</h4><p>${esc(item.desc)}</p>
-          <div class="rating" aria-label="${item.rating} out of 5 stars"><span aria-hidden="true">★★★★★</span><strong>${item.rating}</strong><small>(${item.reviews})</small></div>
           <strong class="product-price">${VelnovaCart.formatMoney(item.price)} <small>each</small></strong>
           <div class="product-actions"><button type="button" class="btn add-to-cart" data-add-to-cart="${esc(item.id)}">Add to Cart</button>
-          <a class="btn outl product-quote" href="quote.html?product=${encodeURIComponent(item.id)}">Request a Quote</a></div></div>
+          <a class="btn outl product-quote" href="quote.html?product=${encodeURIComponent(item.id)}&category=${encodeURIComponent(category.slug)}">Quote</a></div></div>
         </article>`).join('')}</div>`;
     dlg.showModal();
   }

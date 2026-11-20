@@ -2,7 +2,6 @@
    VELNOVA – CONTENT
    Edit text, products, steps and industries here.
    Text in [square brackets] is a placeholder for real facts.
-   "variants" in each product are indexes into BOTTLE.variants.
    ========================================================== */
 window.CONTENT = {
   contact: {
@@ -15,8 +14,7 @@ window.CONTENT = {
     lead: 'VELNOVA makes practical hygiene and cleaning solutions for homes and businesses, including hand soap, detergent, dishwash and other chemical formulations.',
     about: [
       'VELNOVA develops effective cleaning products that make daily hygiene simple. Our range covers hand care, laundry care, kitchen cleaning and dependable everyday chemical solutions.',
-      'Each formula is designed around real use — clean hands, fresh laundry, sparkling dishes and safe, consistent performance at home or in commercial spaces.',
-      'Add VELNOVA’s verified company story, local manufacturing details and product certifications here.'
+      'Each formula is designed around real use — clean hands, fresh laundry, sparkling dishes and safe, consistent performance at home or in commercial spaces.'
     ],
     facts: [
       ['Founded', '2026'],
@@ -51,29 +49,29 @@ window.CONTENT = {
       name: 'Hand Soap', slug: 'hand-soap', category: 'Hand care', accent: '#57c3a5',
       desc: 'A refreshing wash for hands, made for frequent daily use.',
       items: [
-        { id: 'normal-hand-soap', name: 'VELNOVA Normal Hand Soap', desc: 'A balanced everyday formula that removes dirt and leaves hands feeling fresh.', price: 30, rating: 4.6, reviews: 128, variant: 1, accent: '#57c3a5', scent: 'Clean Aloe' },
-        { id: 'premium-hand-soap', name: 'VELNOVA Premium Hand Soap', desc: 'A luxurious conditioning wash with a rich, creamy lather and lasting softness.', price: 30, rating: 4.9, reviews: 86, variant: 0, accent: '#d5b57c', scent: 'Silk Citrus' }
+        { id: 'normal-hand-soap', name: 'VELNOVA Normal Hand Soap', desc: 'A balanced everyday formula that removes dirt and leaves hands feeling fresh.', price: 30, accent: '#57c3a5', scent: 'Clean Aloe' },
+        { id: 'premium-hand-soap', name: 'VELNOVA Premium Hand Soap', desc: 'A luxurious conditioning wash with a rich, creamy lather and lasting softness.', price: 30, accent: '#d5b57c', scent: 'Silk Citrus' }
       ]
     },
     {
       name: 'Multi-Purpose', slug: 'multi-purpose', category: 'Surface care', accent: '#3b82a0',
       desc: 'One adaptable cleaner for the washable surfaces in your home or workspace.',
       items: [
-        { id: 'multi-purpose-cleaner', name: 'VELNOVA Multi-Purpose Cleaner', desc: 'Cuts through everyday grime on most washable surfaces for a streak-free finish.', price: 30, rating: 4.8, reviews: 214, variant: 3, accent: '#3b82a0', scent: 'Fresh Mint' }
+        { id: 'multi-purpose-cleaner', name: 'VELNOVA Multi-Purpose Cleaner', desc: 'Cuts through everyday grime on most washable surfaces for a streak-free finish.', price: 30, accent: '#3b82a0', scent: 'Fresh Mint' }
       ]
     },
     {
       name: 'Detergent', slug: 'detergent', category: 'Fabric care', accent: '#6b74c9',
       desc: 'Everyday laundry cleaning that leaves fabrics fresh and rinses away with ease.',
       items: [
-        { id: 'laundry-detergent', name: 'VELNOVA Laundry Detergent', desc: 'An effective laundry formula designed to lift stains and protect everyday fabrics.', price: 30, rating: 4.7, reviews: 176, variant: 2, accent: '#6b74c9', scent: 'Ocean Breeze' }
+        { id: 'laundry-detergent', name: 'VELNOVA Laundry Detergent', desc: 'An effective laundry formula designed to lift stains and protect everyday fabrics.', price: 30, accent: '#6b74c9', scent: 'Ocean Breeze' }
       ]
     },
     {
       name: 'Dishwash', slug: 'dishwash', category: 'Dish care', accent: '#df9b55',
       desc: 'A kitchen essential that tackles greasy dishes and leaves them shining.',
       items: [
-        { id: 'dishwash-liquid', name: 'VELNOVA Dishwash Liquid', desc: 'Concentrated dishwashing liquid that removes grease while keeping a soft hand feel.', price: 30, rating: 4.8, reviews: 192, variant: 1, accent: '#df9b55', scent: 'Lemon Zest' }
+        { id: 'dishwash-liquid', name: 'VELNOVA Dishwash Liquid', desc: 'Concentrated dishwashing liquid that removes grease while keeping a soft hand feel.', price: 30, accent: '#df9b55', scent: 'Lemon Zest' }
       ]
     }
   ],

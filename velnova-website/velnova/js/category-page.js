@@ -18,10 +18,6 @@
   title.textContent = category.name;
   description.textContent = category.desc;
   type.textContent = category.category;
-  const ratingNote = document.createElement('p');
-  ratingNote.className = 'note rating-note';
-  ratingNote.textContent = 'Illustrative ratings for preview only.';
-  products.before(ratingNote);
   products.innerHTML = category.items.map(item => {
     const label = item.name.replace('VELNOVA ', '').toUpperCase();
     return `<article class="category-product">
@@ -41,11 +37,10 @@
         <p class="kick">${esc(category.name)}</p>
         <h2>${esc(item.name)}</h2>
         <p>${esc(item.desc)}</p>
-        <div class="rating" aria-label="${esc(item.rating)} out of 5 stars"><span aria-hidden="true">★★★★★</span><strong>${esc(item.rating)}</strong><small>${esc(item.reviews)} reviews</small></div>
         <strong class="product-price">${VelnovaCart.formatMoney(item.price)} <small>each</small></strong>
         <div class="product-actions">
           <button type="button" class="btn add-to-cart" data-add-to-cart="${esc(item.id)}">Add to Cart</button>
-          <a class="btn outl product-quote" href="quote.html?product=${encodeURIComponent(item.id)}">Request a Quote</a>
+          <a class="btn outl product-quote" href="quote.html?product=${encodeURIComponent(item.id)}&category=${encodeURIComponent(category.slug)}">Quote</a>
         </div>
       </div>
     </article>`;
