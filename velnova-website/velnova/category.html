@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VELNOVA – Product category</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="bg"></div>
+<nav><a class="brand" href="index.html" aria-label="VELNOVA home"><img class="brand-logo" src="assets/CompanyLogo.png" alt=""><span class="brand-name"><span>V</span><span>E</span><span>L</span><span>N</span><span>O</span><span>V</span><span>A</span></span></a><div class="nav-links"><a href="index.html#top">Home</a><a href="index.html#story">Company</a><a href="index.html#catalogue">Catalogue</a><a href="about.html">About</a><details class="nav-category"><summary aria-label="Toggle product categories"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></summary><div class="nav-category-menu" data-category-menu></div></details><a class="cart-nav" href="cart.html" aria-label="Shopping cart, 0 items">Cart <span class="cart-count">0</span></a></div></nav>
+<main class="category-page">
+  <a class="category-back" href="index.html#catalogue">← All categories</a>
+  <header class="category-heading">
+    <p class="kick" data-category-type></p>
+    <h1 data-category-title>Loading category…</h1>
+    <p class="lead" data-category-description></p>
+  </header>
+  <section class="category-page-products" data-category-products aria-live="polite"></section>
+</main>
+<script src="js/config/content.js"></script>
+<script src="js/category-nav.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/category-page.js"></script>
+</body>
+</html>

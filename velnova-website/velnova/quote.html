@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VELNOVA – Request a Quote</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="bg"></div>
+<nav><a class="brand" href="index.html" aria-label="VELNOVA home"><img class="brand-logo" src="assets/CompanyLogo.png" alt=""><span class="brand-name"><span>V</span><span>E</span><span>L</span><span>N</span><span>O</span><span>V</span><span>A</span></span></a><div class="nav-links"><a href="index.html#top">Home</a><a href="index.html#story">Company</a><a href="index.html#catalogue">Catalogue</a><a href="about.html">About</a><details class="nav-category"><summary aria-label="Toggle product categories"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></summary><div class="nav-category-menu" data-category-menu></div></details><a class="cart-nav" href="cart.html" aria-label="Shopping cart, 0 items">Cart <span class="cart-count">0</span></a></div></nav>
+<main class="quote-page">
+  <header class="commerce-heading">
+    <p class="kick">Tell us what you need</p>
+    <h1>Request a Quote</h1>
+    <p class="lead">Share a few details and the VELNOVA team will follow up with you by email.</p>
+  </header>
+  <form class="quote-form" id="quote-form">
+    <input type="hidden" name="_subject" value="New VELNOVA quote request">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honeypot" aria-hidden="true">
+    <label>Name
+      <input name="name" type="text" autocomplete="name" required maxlength="120">
+    </label>
+    <label>Email
+      <input name="email" type="email" autocomplete="email" required maxlength="254">
+    </label>
+    <label>Phone or WhatsApp <span>(optional)</span>
+      <input name="phone" type="tel" autocomplete="tel" maxlength="40">
+    </label>
+    <label>Product or enquiry
+      <select name="product" id="quote-product" required>
+        <option value="General enquiry">General enquiry</option>
+      </select>
+    </label>
+    <label>Quantity <span>(optional)</span>
+      <input name="quantity" type="number" min="1" step="1" inputmode="numeric">
+    </label>
+    <label class="quote-message">What would you like to know?
+      <textarea name="message" rows="5" required maxlength="3000"></textarea>
+    </label>
+    <p class="quote-disclosure">Your request and contact details will be sent to VELNOVA by email using FormSubmit.</p>
+    <p class="commerce-status" id="quote-status" role="status" aria-live="polite"></p>
+    <button class="btn" type="submit" id="quote-submit">Send Request</button>
+  </form>
+  <p class="quote-confirmation-note">FormSubmit may send a one-time confirmation email to the VELNOVA inbox before the first request can be delivered.</p>
+  <div class="foot"><a href="index.html">VELNOVA</a><a href="cart.html">View Cart</a><span>© 2026 Velnova. All rights reserved.</span></div>
+</main>
+<script src="js/config/content.js"></script>
+<script src="js/category-nav.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/quote.js"></script>
+</body>
+</html>

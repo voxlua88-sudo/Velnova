@@ -5,65 +5,92 @@
    "variants" in each product are indexes into BOTTLE.variants.
    ========================================================== */
 window.CONTENT = {
-  contact: { email: 'sales@velnova.example' },   // quote buttons open an email to this address
+  contact: {
+    email: 'velnovahq@gmail.com',
+    whatsappNumber: '601126190874' // Temporary business number; replace before launch.
+  },
 
   company: {
-    title: 'A chemical company built on precision.',
-    lead: 'VELNOVA develops and supplies chemical solutions for industry, with a focus on consistency, clear information and dependable service.',
+    title: 'Everyday cleaning, powered by chemistry.',
+    lead: 'VELNOVA makes practical hygiene and cleaning solutions for homes and businesses, including hand soap, detergent, dishwash and other chemical formulations.',
     about: [
-      'VELNOVA exists to make chemistry simpler to specify, order and trust. We combine careful formulation with clear product information, so customers know what they are buying and how to use it.',
-      'Every product is presented with its variants, applications and packaging in one place, supported by technical and safety documentation where it is available.',
-      'Replace this text with VELNOVA’s real story: who you are, what you make and why customers choose you.'
+      'VELNOVA develops effective cleaning products that make daily hygiene simple. Our range covers hand care, laundry care, kitchen cleaning and dependable everyday chemical solutions.',
+      'Each formula is designed around real use — clean hands, fresh laundry, sparkling dishes and safe, consistent performance at home or in commercial spaces.',
+      'Add VELNOVA’s verified company story, local manufacturing details and product certifications here.'
     ],
     facts: [
-      ['Headquarters', '[City, country]'],
-      ['Founded', '[Year]'],
-      ['Focus', 'Industrial and commercial chemical solutions'],
-      ['Customers', '[Describe your customers]'],
-      ['Certifications', '[Add verified certifications only]']
+      ['Founded', '2026'],
+      ['Focus', 'Hand soap, detergent, dishwash and hygiene chemicals'],
+    ]
+  },
+
+  aboutPage: {
+    title: 'The people behind everyday care.',
+    lead: 'VELNOVA is built around the products people reach for every day — with a focus on thoughtful essentials and clear choices.',
+    founders: 'SMS Team',
+    storyTitle: 'A thoughtful approach to everyday essentials.',
+    story: [
+      'Founded by SMS Team, VELNOVA brings everyday hygiene and cleaning essentials together under one brand.',
+      'We believe the products people rely on every day should be easy to understand and dependable in use. That point of view shapes how we present our range and the experience we want to offer.'
+    ],
+    principles: [
+      { t: 'Made for real routines', d: 'We focus on the everyday tasks that matter at home and in the places people work.' },
+      { t: 'Clarity comes first', d: 'Straightforward product information helps people find and understand the right essentials.' },
+      { t: 'Care in the details', d: 'From the product range to the way it is presented, the small details are part of the experience.' }
     ]
   },
 
   pillars: [
-    { t: 'Scientific innovation', d: 'A research-led approach to formulation, always working toward better performance and safer handling.' },
-    { t: 'Quality and precision', d: 'Consistent products, clearly labelled and documented. Add your verified quality processes here.' },
-    { t: 'Commitment to excellence', d: 'Responsive support from first enquiry to delivery, built around what each customer needs.' }
+    { t: 'Effective formulations', d: 'Practical cleaning formulas developed for hands, laundry, dishes and everyday surfaces.' },
+    { t: 'Consistent quality', d: 'Reliable performance, clear product information and careful attention to every batch.' },
+    { t: 'Everyday reliability', d: 'Dependable supply and responsive support for households, retailers and commercial customers.' }
   ],
 
   products: [
-    { name: 'Industrial Cleaner Concentrate', category: 'Cleaning and sanitation', variants: [1, 3],
-      desc: 'A concentrated cleaning solution for routine facility and equipment cleaning.',
-      apps: ['Facility cleaning', 'Equipment maintenance', 'Workshop floors'], packaging: 'To be confirmed', docs: 'Technical data sheet: coming soon' },
-    { name: 'Water Treatment Solution', category: 'Water treatment', variants: [1, 3],
-      desc: 'A treatment chemical for industrial and commercial water systems.',
-      apps: ['Cooling systems', 'Process water', 'Commercial plant rooms'], packaging: 'To be confirmed', docs: 'Technical data sheet: coming soon' },
-    { name: 'Descaling Agent', category: 'Industrial manufacturing', variants: [0, 3],
-      desc: 'A descaling product for removing mineral build-up from equipment.',
-      apps: ['Boilers and heat exchangers', 'Production equipment'], packaging: 'To be confirmed', docs: 'Technical data sheet: coming soon' },
-    { name: 'Agricultural Solution', category: 'Agriculture', variants: [2, 0],
-      desc: 'A solution supporting agricultural and processing operations.',
-      apps: ['Farm equipment', 'Processing sites'], packaging: 'To be confirmed', docs: 'Technical data sheet: coming soon' },
-    { name: 'Laboratory Grade Solvent', category: 'Laboratory and research', variants: [3],
-      desc: 'A clear solvent supplied for laboratory and research use.',
-      apps: ['Sample preparation', 'Equipment cleaning', 'Research'], packaging: 'To be confirmed', docs: 'Technical data sheet: coming soon' },
-    { name: 'Heavy-Duty Degreaser', category: 'Industrial manufacturing', variants: [0, 2],
-      desc: 'A degreasing product for machinery, tools and workshop surfaces.',
-      apps: ['Machinery', 'Tools', 'Workshop surfaces'], packaging: 'To be confirmed', docs: 'Technical data sheet: coming soon' }
+    {
+      name: 'Hand Soap', slug: 'hand-soap', category: 'Hand care', accent: '#57c3a5',
+      desc: 'A refreshing wash for hands, made for frequent daily use.',
+      items: [
+        { id: 'normal-hand-soap', name: 'VELNOVA Normal Hand Soap', desc: 'A balanced everyday formula that removes dirt and leaves hands feeling fresh.', price: 30, rating: 4.6, reviews: 128, variant: 1, accent: '#57c3a5', scent: 'Clean Aloe' },
+        { id: 'premium-hand-soap', name: 'VELNOVA Premium Hand Soap', desc: 'A luxurious conditioning wash with a rich, creamy lather and lasting softness.', price: 30, rating: 4.9, reviews: 86, variant: 0, accent: '#d5b57c', scent: 'Silk Citrus' }
+      ]
+    },
+    {
+      name: 'Multi-Purpose', slug: 'multi-purpose', category: 'Surface care', accent: '#3b82a0',
+      desc: 'One adaptable cleaner for the washable surfaces in your home or workspace.',
+      items: [
+        { id: 'multi-purpose-cleaner', name: 'VELNOVA Multi-Purpose Cleaner', desc: 'Cuts through everyday grime on most washable surfaces for a streak-free finish.', price: 30, rating: 4.8, reviews: 214, variant: 3, accent: '#3b82a0', scent: 'Fresh Mint' }
+      ]
+    },
+    {
+      name: 'Detergent', slug: 'detergent', category: 'Fabric care', accent: '#6b74c9',
+      desc: 'Everyday laundry cleaning that leaves fabrics fresh and rinses away with ease.',
+      items: [
+        { id: 'laundry-detergent', name: 'VELNOVA Laundry Detergent', desc: 'An effective laundry formula designed to lift stains and protect everyday fabrics.', price: 30, rating: 4.7, reviews: 176, variant: 2, accent: '#6b74c9', scent: 'Ocean Breeze' }
+      ]
+    },
+    {
+      name: 'Dishwash', slug: 'dishwash', category: 'Dish care', accent: '#df9b55',
+      desc: 'A kitchen essential that tackles greasy dishes and leaves them shining.',
+      items: [
+        { id: 'dishwash-liquid', name: 'VELNOVA Dishwash Liquid', desc: 'Concentrated dishwashing liquid that removes grease while keeping a soft hand feel.', price: 30, rating: 4.8, reviews: 192, variant: 1, accent: '#df9b55', scent: 'Lemon Zest' }
+      ]
+    }
   ],
 
   steps: [
-    { t: '1. Consult', d: 'We learn about your application, volumes and requirements.' },
-    { t: '2. Specify', d: 'We recommend the right product and variant for the job.' },
-    { t: '3. Document', d: 'You receive technical and safety documentation where available.' },
-    { t: '4. Deliver', d: 'Your order is packaged, shipped and supported after delivery.' }
+    { t: '1. Understand', d: 'Tell us how the products will be used and what your operation needs.' },
+    { t: '2. Recommend', d: 'We help identify a suitable product and format for your requirements.' },
+    { t: '3. Prepare', d: 'We share the relevant product and safety information available for your selection.' },
+    { t: '4. Supply', d: 'We coordinate your order and remain available when it arrives.' }
   ],
 
   industries: [
-    { t: 'Industrial manufacturing', d: 'Process chemistry for production lines.' },
-    { t: 'Cleaning and sanitation', d: 'Solutions for facilities and hygiene.' },
-    { t: 'Water treatment', d: 'Chemistry for municipal and industrial water.' },
-    { t: 'Agriculture', d: 'Products supporting growers and processors.' },
-    { t: 'Laboratory and research', d: 'Reagents and materials for scientific work.' },
-    { t: 'Commercial applications', d: 'Everyday chemistry for businesses.' }
+    { t: 'Homes', d: 'Practical essentials for handwashing, laundry, dishes and routine cleaning.' },
+    { t: 'Shops and wholesalers', d: 'Everyday cleaning ranges for retail shelves and distribution.' },
+    { t: 'Guest accommodation', d: 'Hand and cleaning products for hotel rooms and shared guest spaces.' },
+    { t: 'Workplaces', d: 'Useful hygiene supplies for shared kitchens, washrooms and offices.' },
+    { t: 'Commercial sites', d: 'Cleaning products for the day-to-day needs of business facilities.' },
+    { t: 'Professional kitchens', d: 'Dish and surface care for kitchens with busy service routines.' }
   ]
 };

@@ -4,46 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VELNOVA – Chemistry that moves the future</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="top">
 <div id="load"><b>VELNOVA</b><i></i></div>
 <div id="prog"></div><div id="cur"></div><div id="cur2"></div>
 <div id="bg"></div>
-<canvas id="gl" aria-label="Interactive 3D chemical container"></canvas>
+<canvas id="gl" aria-label="Interactive 3D molecular chemistry visualization"></canvas>
 
-<nav><b>VELNOVA</b><div><a href="#story">Company</a><a href="#catalogue">Catalogue</a><a href="#showcase">Experience</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div></nav>
+<nav><a class="brand" href="index.html" aria-label="VELNOVA home"><img class="brand-logo" src="assets/CompanyLogo.png" alt=""><span class="brand-name"><span>V</span><span>E</span><span>L</span><span>N</span><span>O</span><span>V</span><span>A</span></span></a><div class="nav-links"><a href="index.html#top">Home</a><a href="#story">Company</a><a href="#catalogue">Catalogue</a><a href="about.html">About</a><details class="nav-category"><summary aria-label="Toggle product categories"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></summary><div class="nav-category-menu" data-category-menu></div></details><a class="cart-nav" href="cart.html" aria-label="Shopping cart, 0 items">Cart <span class="cart-count">0</span></a></div></nav>
 
 <header class="hero">
  <div class="hero-text">
   <h1 class="mega" aria-label="VELNOVA"><span>V</span><span>E</span><span>L</span><span>N</span><span>O</span><span>V</span><span>A</span></h1>
+  <div class="brand-accent"><span>HYGIENE SOLUTIONS</span></div>
   <div class="hero-copy">
    <h2>CHEMISTRY THAT MOVES THE FUTURE.</h2>
-   <p>Engineering innovative chemical solutions through precision, quality and technology.</p>
+   <p>Everyday chemistry for cleaner hands, homes and kitchens — from hand soap and detergent to dishwash and reliable chemical solutions.</p>
    <a class="btn mag" href="#catalogue">Explore Products</a><a class="btn ghost mag" href="#story">Discover VELNOVA</a>
   </div>
  </div>
 </header>
 
 <main id="showcase">
- <section class="panel c"><div class="in"><p class="kick">Introducing the container</p><h3>Built to be seen.</h3><p>A sample industrial product, modelled from scratch. Scroll to move around it.</p></div></section>
- <section class="panel r"><div class="in"><p class="kick">Profile</p><h3>Engineered from the outside in.</h3><p>A wide, softly radiused body, an integrated handle at the upper right, a screw cap at the upper left and reinforced lower edges.</p></div></section>
- <section class="panel"><div class="in"><p class="kick">Inside</p><h3>See exactly what’s in it.</h3><p>A translucent inspection area keeps the contents and the fill level visible at a glance, while the handle and cap stay solid.</p></div></section>
+ <section class="panel c daily-hygiene"><div class="in"><p class="kick">Daily hygiene</p><h3>Clean hands start here.</h3><p>VELNOVA hand soaps combine effective cleansing with a fresh, pleasant everyday experience.</p></div></section>
+ <section class="panel r"><div class="in"><p class="kick">Laundry care</p><h3>Freshness that lasts.</h3><p>Detergent formulas lift everyday dirt and stains while helping fabrics stay clean, soft and fresh.</p></div></section>
+ <section class="panel"><div class="in"><p class="kick">Kitchen care</p><h3>Cut through grease.</h3><p>VELNOVA dishwash liquids deliver concentrated cleaning power for dishes, utensils and busy kitchen spaces.</p></div></section>
  <section class="panel r"><div class="in"><p class="kick">Variants</p><h3>Choose the chemistry.</h3>
   <div class="sw" data-sw></div><div class="vname" data-vn></div><div class="vdesc" data-vd></div>
   <p class="note" style="margin-top:14px;font-size:13px;opacity:.6">Illustrative colours. Map these to real VELNOVA products.</p></div></section>
- <section class="panel"><div class="in"><p class="kick">Every side</p><h3>Details on all faces.</h3><p>Labels, markings and technical information sit on both sides of the container and stay put when the chemistry changes.</p></div></section>
- <section class="panel c"><div class="in"><p class="kick">Sample product</p><h3>VELNOVA Industrial Container</h3>
-  <ul class="specs"><li><span>Variant</span><b data-vn></b></li><li><span>Capacity</span><b>To be confirmed</b></li><li><span>Material</span><b>To be confirmed</b></li><li><span>Documentation</span><b>Supplied with catalogue</b></li></ul>
-  <a class="btn mag quote" href="#">Request a Quote</a></div></section>
+ <section class="panel"><div class="in"><p class="kick">Technical clarity</p><h3>Known from every angle.</h3><p>Clear specifications and safety information help customers understand the chemistry behind their chosen solution.</p></div></section>
+ <section class="panel c sample-product"><div class="in">
+  <div class="sample-product-layout">
+   <div class="sample-product-art"><img src="assets/product-placeholder.svg" alt="Generic VELNOVA sample product bottle illustration"><span>Placeholder packaging</span></div>
+   <div class="sample-product-info"><p class="kick">Sample solution</p><h3>VELNOVA Chemical Solution</h3>
+    <p class="sample-product-note">Illustrative product mockup. Replace with the final product image and confirmed specifications.</p>
+    <ul class="specs"><li><span>Variant</span><b data-vn></b></li><li><span>Capacity</span><b>To be confirmed</b></li><li><span>Material</span><b>To be confirmed</b></li><li><span>Documentation</span><b>Supplied with catalogue</b></li></ul>
+    <a class="btn mag quote" href="quote.html">Request a Quote</a>
+   </div>
+  </div>
+ </div></section>
 </main>
 
 <section id="inspect">
  <div><h3>Pick it up. Turn it over.</h3><p style="opacity:.75;margin-top:10px">Drag to rotate. Use the buttons to zoom or jump to a detail.</p></div>
  <div>
   <div class="sw mid" data-sw></div>
-  <div class="tools"><button class="btn ghost" data-f="cap">Inspect cap</button><button class="btn ghost" data-f="handle">Inspect handle</button><button class="btn ghost" data-f="liquid">View liquid</button><button class="btn ghost" data-z="-1">Zoom in</button><button class="btn ghost" data-z="1">Zoom out</button><button class="btn" id="reset">Reset view</button></div>
+  <div class="tools"><button class="btn ghost" data-f="core">Inspect core</button><button class="btn ghost" data-f="structure">View structure</button><button class="btn ghost" data-f="flow">View particles</button><button class="btn ghost" data-z="-1">Zoom in</button><button class="btn ghost" data-z="1">Zoom out</button><button class="btn" id="reset">Reset view</button></div>
  </div>
 </section>
 
@@ -51,20 +59,21 @@
  <section class="sec" id="story"><h2 id="c-title"></h2><p class="lead" id="c-lead"></p>
   <div class="two"><div id="c-about"></div><div class="facts" id="c-facts"></div></div>
   <div class="grid" id="pillars"></div></section>
- <section class="sec" id="catalogue"><h2>Chemical solutions.</h2><p class="lead">Select a product to see its variants, applications and packaging, or view it in 3D.</p>
-  <div class="grid" id="products"></div><p class="note" style="margin-top:20px">Sample products. Replace them in js/config/content.js.</p></section>
- <section class="sec" id="process"><h2>How we work with you.</h2><div class="grid" id="steps"></div></section>
- <section class="sec" id="industries"><h2>Industries we serve.</h2><div class="grid" id="inds"></div>
-  <p class="note" style="margin-top:20px">Placeholder categories. Keep only the industries VELNOVA actually serves.</p></section>
- <section id="contact"><h2>Tell us what you need.</h2><p class="note" style="margin-top:14px">The quote button opens an email with your chosen variant. Set your address in js/config/content.js.</p><a class="btn mag quote" href="#">Request a Quote</a>
-  <div class="foot"><span>VELNOVA</span><span>Precision in chemistry. Excellence in every detail.</span></div></section>
+ <section class="sec" id="catalogue"><h2>Find the right care for every task.</h2><p class="lead">Choose a product range to open its product cards, then add items to your cart.</p>
+  <div class="grid" id="products"></div></section>
+ <section class="sec" id="process"><h2>From first question to final delivery.</h2><div class="grid" id="steps"></div></section>
+ <section class="sec" id="industries"><h2>Solutions for the spaces you manage.</h2><div class="grid" id="inds"></div></section>
+ <section id="contact"><h2>Tell us what you need.</h2><p class="note" style="margin-top:14px">Send your requirements and our team will follow up by email.</p><a class="btn mag quote" href="quote.html">Request a Quote</a>
+   <p class="note" style="margin-top:18px">Email: <a id="contact-email"></a></p>
+  <div class="foot"><span>Velnova</span><span>© 2026 Velnova. All rights reserved.</span></div></section>
 </div>
 <dialog id="pd" aria-label="Product details"></dialog>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/config/content.js"></script>
+<script src="js/category-nav.js"></script>
+<script src="js/cart.js"></script>
 <script src="js/config/bottle.config.js"></script>
 <script src="js/main.js"></script>
 <script src="js/cards.js"></script>
