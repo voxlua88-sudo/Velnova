@@ -30,5 +30,5 @@
   }
 
   form.action = `https://formsubmit.co/${CONTENT.contact.email}`;
-  nextField.value = new URL('quote-sent.html', location.href).href;
+  nextField.value = new URL('/quote-sent', location.origin).href;
 })();
